@@ -12,6 +12,7 @@ class Alpaca{
         weight = 0,
         blood = '',
         food = '',
+        feet = 'hooves',
         lanolin = 'like sheeps wool'
     ){
         this.name = name;
@@ -20,6 +21,7 @@ class Alpaca{
         this.weight = weight;
         this.blood = blood;
         this.food = food;
+        this.feet = feet;        
         this.lanolin = lanolin
     }
 }
@@ -31,6 +33,7 @@ class Bonobo{
         weight = 0,
         blood = '',
         food = '',
+        feet = '',
         grip = ''
     ){
         this.name = name;
@@ -39,6 +42,7 @@ class Bonobo{
         this.weight = weight;
         this.blood = blood;
         this.food = food;
+        this.feet = feet;
         this.grip = grip;
     }
 }
@@ -50,6 +54,7 @@ class Cat{
         weight = 0,
         blood = '',
         food = '',
+        feet = 'paws',
         lives = 9        
     ){
         this.name = name;
@@ -58,6 +63,7 @@ class Cat{
         this.weight = weight;
         this.blood = blood;
         this.food = food;
+        this.feet = feet;
         this.lives = lives;
     }
 }
@@ -69,6 +75,7 @@ class Dingo{
         weight = 0,
         blood = '',
         food = '',
+        feet = 'paws',
         maybe = 'The Dingo ate your baby'        
     ){
         this.name = name;
@@ -77,6 +84,7 @@ class Dingo{
         this.weight = weight;
         this.blood = blood;
         this.food = food;
+        this.feet= feet;
         this.maybe = maybe;
     }
 }
@@ -88,6 +96,7 @@ class Elephant{
         weight = 0,
         blood = '',
         food = '',
+        feet = 'yuuuge feets',
         forgets = false        
     ){
         this.name = name;
@@ -96,6 +105,7 @@ class Elephant{
         this.weight = weight;
         this.blood = blood;
         this.food = food;
+        this.feet = feet;
         this.forgets = forgets;
     }
 }
@@ -107,6 +117,7 @@ class Fox{
         weight = 0,
         blood = '',
         food = '',
+        feet = 'paws',
         say = ''  
     ){
         this.name = name;
@@ -115,6 +126,7 @@ class Fox{
         this.weight = weight;
         this.blood = blood;
         this.food = food;
+        this.feet = feet;
         this.say = say
     }
 }
@@ -561,7 +573,7 @@ let kitty = new Cat('Kitty','Orange', 'Female', 10, 'warm', 'mice', )
 zoo.push(kitty)
 let doggo = new Dingo('Doggo','Brown', 'Male', 40, 'warm', 'babies', )
 zoo.push(doggo)
-let oly = new Elephant('Olyphany','Grey', 'Male', 4000, 'warm', 'grass',false )
+let oly = new Elephant('Olyphant','Grey', 'Male', 4000, 'warm', 'grass','',false )
 zoo.push(oly)
 let fennick = new Fox('Fen','Orange', 'Male', 30, 'warm', 'chickens','rng rng rng rng' )
 zoo.push(fennick)
@@ -616,3 +628,11 @@ zoo.forEach(element => {
 });
 
 mudBloods.push('Hermione')
+
+zoo.forEach(element => {
+    if(element.feet.includes('hoov')){
+        hoofers.push(element)
+    }else{
+        nonHoofers.push(element)
+    }
+})
